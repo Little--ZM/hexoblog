@@ -63,6 +63,104 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Problem-with-Using-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2014/09/19/Problem-with-Using-Hexo/" class="article-date">
+  <time datetime="2014-09-19T09:01:37.000Z" itemprop="datePublished">9月 19 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/coding-life/">coding_life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2014/09/19/Problem-with-Using-Hexo/">Problem with Using Hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="使用hexo出现的一些问题">使用hexo出现的一些问题</h2>
+<p>当我第一次使用hexo的时候 使用命令<code>hexo init blog</code> 却失败了，告诉我主题不存在</p>
+<p>不断google之后解决问题</p>
+<h3 id="解决问题方法">解决问题方法</h3>
+<p>命令<code>hexo init blog</code> 只能用在根目录下的目录 如 <code>/data/webapps/</code><br>一旦在用户目下，就不行 如在 <code>~/hexo/</code> 就会出现theme不存在的问题</p>
+<p>切记</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://little__zm.com/blog/2014/09/19/Problem-with-Using-Hexo/" data-id="mgock6kicm0lt4kj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Use-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2014/09/19/Use-Hexo/" class="article-date">
+  <time datetime="2014-09-19T08:08:13.000Z" itemprop="datePublished">9月 19 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/coding-life/">coding_life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2014/09/19/Use-Hexo/">Use Hexo</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第一次使用这个东西发布博客">第一次使用这个东西发布博客</h2>
+<p>这个是java连接数据库代码段</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">String driver = <span class="string">"com.mysql.jdbc.Driver"</span>;</div><div class="line">String dbName = <span class="string">"spring"</span>;</div><div class="line">String passwrod = <span class="string">"root"</span>;</div><div class="line">String userName = <span class="string">"root"</span>;</div><div class="line">String url = <span class="string">"jdbc:mysql://localhost:3306/"</span> + dbName;</div><div class="line">String sql = <span class="string">"select * from users"</span>;</div><div class="line"> </div><div class="line"><span class="keyword">try</span> {</div><div class="line">    Class.forName(driver);</div><div class="line">    Connection conn = DriverManager.getConnection(url, userName,</div><div class="line">            passwrod);</div><div class="line">    PreparedStatement ps = conn.prepareStatement(sql);</div><div class="line">    ResultSet rs = ps.executeQuery();</div><div class="line">    <span class="keyword">while</span> (rs.next()) {</div><div class="line">        System.out.println(<span class="string">"id : "</span> + rs.getInt(<span class="number">1</span>) + <span class="string">" name : "</span></div><div class="line">                + rs.getString(<span class="number">2</span>) + <span class="string">" password : "</span> + rs.getString(<span class="number">3</span>));</div><div class="line">    }</div><div class="line"> </div><div class="line">     </div><div class="line">} <span class="keyword">catch</span> (Exception e) {</div><div class="line">    e.printStackTrace();</div><div class="line">} <span class="keyword">finally</span> {</div><div class="line">    <span class="comment">// 关闭记录集</span></div><div class="line">    <span class="keyword">if</span> (rs != <span class="keyword">null</span>) {</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            rs.close();</div><div class="line">        } <span class="keyword">catch</span> (SQLException e) {</div><div class="line">            e.printStackTrace();</div><div class="line">        }</div><div class="line">    }</div><div class="line"> </div><div class="line">    <span class="comment">// 关闭声明</span></div><div class="line">    <span class="keyword">if</span> (ps != <span class="keyword">null</span>) {</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            ps.close();</div><div class="line">        } <span class="keyword">catch</span> (SQLException e) {</div><div class="line">            e.printStackTrace();</div><div class="line">        }</div><div class="line">    }</div><div class="line"> </div><div class="line">    <span class="comment">// 关闭链接对象</span></div><div class="line">    <span class="keyword">if</span> (conn != <span class="keyword">null</span>) {</div><div class="line">        <span class="keyword">try</span> {</div><div class="line">            conn.close();</div><div class="line">        } <span class="keyword">catch</span> (SQLException e) {</div><div class="line">            e.printStackTrace();</div><div class="line">        }</div><div class="line">    }</div><div class="line"></div><div class="line">}</div></pre></td></tr></table></figure>
+
+<p>这是测试</p>
+<blockquote>
+<p>需要注意的是本地改动后需要刷新网页才可以生效</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://little__zm.com/blog/2014/09/19/Use-Hexo/" data-id="vvu1zwzaxjtu8kxp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/java/">java</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/2014/09/18/hello-world/" class="article-date">
@@ -123,16 +221,37 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/coding-life/">coding_life</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/java/">java</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/hexo/" style="font-size: 20.00px;">hexo</a><a href="/blog/tags/java/" style="font-size: 10.00px;">java</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/09/">September 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2014/09/">September 2014</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -142,6 +261,14 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/2014/09/19/Problem-with-Using-Hexo/">Problem with Using Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2014/09/19/Use-Hexo/">Use Hexo</a>
+          </li>
         
           <li>
             <a href="/blog/2014/09/18/hello-world/">Hello World</a>
